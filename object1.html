@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myCar(make, model, year){
+            this.make = make;
+            this.model = model;
+            this.year = year;
+
+        }
+        var car = new myCar("Honda", "Ciity", "2013");
+        console.log(car.year);
+        var person = {
+            name: "Haroon",
+            displayName: function(){
+                return this.name;
+            }
+        }
+        var p = Object.create(person);
+        console.log(p.displayName());
+        var p2 = Object.create(person);
+        p2.name = "Haroon Rasheed";
+        console.log(p2.displayName())
+        console.log(p2.hasOwnProperty('name'));
+    </script>
+</body>
+</html>
